@@ -1,0 +1,6 @@
+<div id="container">
+  <div *ngFor="let star of stars" class="star"
+       [ngStyle]="{'width.px': star.size, 'height.px': star.size, 'left.px': star.position[0], 'top.px': star.position[1]}"
+        parallax [ratio]="star.size / 20">
+  </div>
+</div>

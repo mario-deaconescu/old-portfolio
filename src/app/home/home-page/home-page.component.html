@@ -1,0 +1,47 @@
+<div id="wrapper">
+  <!-- Floating logos
+  <img *ngFor="let logo of logoList" [src]="logo" class="floating-logo" alt="logo"
+       ngxParallaxScroll
+       [parallaxSpeed]='1'
+       [parallaxSmoothness]='0.0001'
+       [parallaxDirection]='"straight"'
+       [parallaxTimingFunction]='"linear"'
+       [parallaxThrottleTime]='0'
+       float
+       [floatSpeed]="0.03"/>
+  -->
+  <star-background [starCount]="70"></star-background>
+  <div id="welcome-panel">
+    <img id="picture" src="assets/me.jpeg" alt="me" class="golden-glow"/>
+    <div id="info">
+      <p id="primary-info">Hello, my name is <span class="golden-text">Mario</span></p>
+      <p id="secondary-info">Learn more about my work below.</p>
+    </div>
+  </div>
+  <div id="various-fits-panel">
+    <div id="vf-video-wrapper" class="float" data-aos="fade" data-aos-duration="1000">
+      <video autoplay loop muted playsinline onloadedmetadata="this.muted = true" oncanplay="this.play()" data-aos="fade-right">
+        <!-- Provide the Safari video -->
+        <source *ngIf="platform.SAFARI || platform.IOS"
+                src="assets/vf-hevc-safari.mp4"
+                type='video/mp4; codecs="hvc1"'>
+        <!-- .. and the Chrome video -->
+        <source *ngIf="platform.WEBKIT || platform.BLINK"
+                src="assets/vf-vp9-chrome.webm"
+                type="video/webm">
+
+      </video>
+    </div>
+    <div id="vf-info" data-aos="fade-left">
+      <p id="vf-title"><span class="golden-text">Various Fits</span></p>
+      <mat-divider></mat-divider>
+      <ul id="vf-features">
+        <li> Full-stack web and native app </li>
+        <li> Social media platform </li>
+        <li> Hosted on cloud architecture </li>
+      </ul>
+      <mat-divider></mat-divider>
+      <p id="vf-more"> Learn about the technologies used <a href="www.youtube.com">here</a> </p>
+    </div>
+  </div>
+</div>
