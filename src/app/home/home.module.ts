@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import {AuxModule} from "@aux/aux.module";
 import {MatDividerModule} from "@angular/material/divider";
 import { StarBackgroundComponent } from './home-page/star-background/star-background.component';
+import {MatIconModule} from "@angular/material/icon";
 
 
 
@@ -12,11 +13,12 @@ import { StarBackgroundComponent } from './home-page/star-background/star-backgr
     HomePageComponent,
     StarBackgroundComponent
   ],
-    imports: [
-        CommonModule,
-        AuxModule,
-        MatDividerModule,
-    ],
+  imports: [
+    CommonModule,
+    AuxModule,
+    MatDividerModule,
+    MatIconModule,
+  ],
   exports: [
     HomePageComponent
   ]
