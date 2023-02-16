@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {NgxParallaxScrollModule} from "ngx-parallax-scroll";
 import {HomeModule} from "@home/home.module";
 import {AuxModule} from "@aux/aux.module";
 
@@ -14,7 +13,6 @@ import {AuxModule} from "@aux/aux.module";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NgxParallaxScrollModule,
     HomeModule,
     AuxModule
   ],

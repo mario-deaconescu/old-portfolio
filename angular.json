@@ -8,7 +8,7 @@
     }
   },
   "projects": {
-    "untitled": {
+    "portfolio": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -18,7 +18,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/untitled",
+            "outputPath": "dist/portfolio",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -31,6 +31,8 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
+              "animate.css/animate.compat.css",
+              "aos/dist/aos.css",
               "src/styles.sass"
             ],
             "scripts": []
@@ -66,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "untitled:build:production"
+              "browserTarget": "portfolio:build:production"
             },
             "development": {
-              "browserTarget": "untitled:build:development"
+              "browserTarget": "portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "untitled:build"
+            "browserTarget": "portfolio:build"
           }
         },
         "test": {
@@ -94,6 +96,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
+              "animate.css/animate.compat.css",
               "src/styles.sass"
             ],
             "scripts": []
