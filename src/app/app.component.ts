@@ -30,12 +30,12 @@ export const fadeAnimation =
   ]);
 export const slideAnimation =
   trigger('routeAnimations', [
-    transition('Home => *', slideTo('right') ),
-    transition('* => Home', slideTo('left') ),
-    transition('Contact => *', slideTo('left') ),
-    transition('* => Contact', slideTo('right') ),
-    // transition('isRight => *', slideTo('left') ),
-    // transition('isLeft => *', slideTo('right') )
+    transition('Home => Experience', slideTo('right') ),
+    transition('Home => Contact', slideTo('right') ),
+    transition('Experience => Contact', slideTo('right') ),
+    transition('Experience => Home', slideTo('left') ),
+    transition('Contact => Home', slideTo('left') ),
+    transition('Contact => Experience', slideTo('left') ),
   ]);
 function slideTo(direction: string) {
   const optional = { optional: true };

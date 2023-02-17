@@ -46,11 +46,19 @@
   #br-image
     margin: auto
     $robot-image-size: 300px
+    $backdrop-color: #121212
     img
       width: $robot-image-size
       height: $robot-image-size
-      -webkit-filter: drop-shadow(5px 5px 5px #222)
-      filter: drop-shadow(5px 5px 5px #222)
+      -webkit-filter: drop-shadow(0px 0px 5px $backdrop-color)
+      filter: drop-shadow(0px 0px 5px $backdrop-color)
+      transform: scale(1)
+      transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out
+    &:hover
+      img
+        -webkit-filter: drop-shadow(0px 0px 15px $backdrop-color)
+        filter: drop-shadow(0px 0px 15px $backdrop-color)
+        transform: scale(1.1)
 
 
 #asc-panel
@@ -76,16 +84,16 @@
 #netlup-panel
   #netlup-logo
     margin: auto
-    $backdrop-color: rgba(243, 243, 243, 0.9)
+    $backdrop-color: rgb(255, 255, 255)
     img
       cursor: pointer
-      filter: drop-shadow(0px 0px 20px $backdrop-color)
+      filter: drop-shadow(0px 0px 25px $backdrop-color)
       //-webkit-filter: drop-shadow(5px 5px 5px #0b38ec)
       transform: scale(1)
       transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out
     &:hover
       img
-        filter: drop-shadow(0px 0px 1px $backdrop-color)
+        filter: drop-shadow(0px 0px 0px $backdrop-color)
         //  -webkit-filter: drop-shadow(5px 15px 5px #1040e1)
         transform: scale(1.1)
 
