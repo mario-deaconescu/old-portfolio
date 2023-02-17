@@ -12,11 +12,10 @@ export class ParallaxDirective {
 
   ngOnInit(): void {
     this.initialTop = parseInt(this.eleRef.nativeElement.style.top)
-    console.log(this.eleRef.nativeElement.style.top)
   }
 
-  @HostListener("window:scroll", ["$event"])
-  onWindowScroll(event: any){
+  @HostListener("window:scroll")
+  onWindowScroll(){
     // Add parallax effect based of parallax ratio
     this.eleRef.nativeElement.style.top = (this.initialTop - (window.scrollY * this.parallaxRatio)) + 'px'
   }

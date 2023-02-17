@@ -1,99 +1,91 @@
-#wrapper
-  .floating-logo
-    $logo-size: 30px
-    width: $logo-size
-    height: $logo-size
-    position: absolute
-    opacity: 0.2
+#welcome-panel
+  width: fit-content
+  margin: 250px auto 600px
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  gap: 20px
+  img
+    $picture-size: 200px
+    width: $picture-size
+    height: $picture-size
     object-fit: cover
-    z-index: -100
-  #welcome-panel, #various-fits-panel, #asc-panel
-    width: fit-content
-    margin: 250px auto 600px
-    display: flex
-    align-items: center
-    flex-wrap: wrap
-    gap: 20px
-  #welcome-panel
-    img
-      $picture-size: 200px
-      width: $picture-size
-      height: $picture-size
-      object-fit: cover
-      object-position: top
-      border-radius: 100%
-      margin: auto
-    #info
-      font-weight: 200
-      margin: auto
-      #primary-info
-        font-size: 2rem
-        margin-bottom: 0
-        margin-top: 10px
-      #secondary-info
-        margin-top: 10px
-        font-size: 1rem
-        opacity: 0.5
-  #various-fits-panel
-    $vf-aspect-ratio: 1.92816091954023
-    $vf-video-width: 200px
-    $vf-video-height: calc($vf-video-width * $vf-aspect-ratio)
-    $vf-video-margin-horizontal: 20px
-    $vf-video-margin-vertical: 20px
-    #vf-video-wrapper
-      width: $vf-video-width
-      height: $vf-video-height + $vf-video-margin-vertical
-      margin: auto
-      border-radius: 36px
-      video
-        position: relative
-        width: $vf-video-width + $vf-video-margin-horizontal
-        height: calc(($vf-video-width + $vf-video-margin-horizontal) * $vf-aspect-ratio)
-        right: calc($vf-video-margin-horizontal / 2)
-        bottom: calc($vf-video-margin-vertical / 2)
-  #asc-panel
-    #asc-images
-      $asc-image-size: 100px
-      display: flex
-      flex-direction: column
-      align-items: center
-      margin: auto
-      mat-icon, img
-        -webkit-filter: drop-shadow(5px 5px 5px #222)
-        filter: drop-shadow(5px 5px 5px #222)
-      mat-icon
-        transform: scale(2)
-        margin-top: 10px
-        margin-bottom: 20px
-      img
-        width: $asc-image-size
-        height: $asc-image-size
-      #wasm
-        margin-bottom: 10px
-  .project-info
-    max-width: 80vw
+    object-position: top
+    border-radius: 100%
     margin: auto
-    mat-divider
-      border-top-color: rgba(255,255,255,0.5)
-    .project-title
+  #info
+    font-weight: 200
+    margin: auto
+    #primary-info
       font-size: 2rem
-      line-height: 2.5rem
-      text-align: center
+      margin-bottom: 0
       margin-top: 10px
-      margin-bottom: 20px
-    .project-features
-      list-style-type: disc
-      font-size: 1.2rem
-      line-height: 1.8rem
-      font-weight: 300
-      padding-inline-start: 1.5rem
-      padding-inline-end: 1rem
-    .project-more
+    #secondary-info
+      margin-top: 10px
       font-size: 1rem
       opacity: 0.5
-      margin: 10px 10px
-      text-align: left
-      a
-        color: white
+#various-fits-panel
+  padding-top: 30px
+  $vf-aspect-ratio: 1.92816091954023
+  $vf-video-width: 200px
+  $vf-video-height: calc($vf-video-width * $vf-aspect-ratio)
+  $vf-video-margin-horizontal: 20px
+  $vf-video-margin-vertical: 20px
+  #vf-video-wrapper
+    width: $vf-video-width
+    height: $vf-video-height + $vf-video-margin-vertical
+    margin: auto
+    border-radius: 36px
+    video
+      position: relative
+      width: $vf-video-width + $vf-video-margin-horizontal
+      height: calc(($vf-video-width + $vf-video-margin-horizontal) * $vf-aspect-ratio)
+      right: calc($vf-video-margin-horizontal / 2)
+      bottom: calc($vf-video-margin-vertical / 2)
+#br-panel
+  #br-image
+    margin: auto
+    $robot-image-size: 300px
+    img
+      width: $robot-image-size
+      height: $robot-image-size
+      -webkit-filter: drop-shadow(5px 5px 5px #222)
+      filter: drop-shadow(5px 5px 5px #222)
 
+
+#asc-panel
+  #asc-images
+    $asc-image-size: 100px
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: auto
+    mat-icon, img
+      -webkit-filter: drop-shadow(5px 5px 5px #222)
+      filter: drop-shadow(5px 5px 5px #222)
+    mat-icon
+      transform: scale(2)
+      margin-top: 10px
+      margin-bottom: 20px
+    img
+      width: $asc-image-size
+      height: $asc-image-size
+    #wasm
+      margin-bottom: 10px
+
+#netlup-panel
+  #netlup-logo
+    margin: auto
+    $backdrop-color: rgba(243, 243, 243, 0.9)
+    img
+      cursor: pointer
+      filter: drop-shadow(0px 0px 20px $backdrop-color)
+      //-webkit-filter: drop-shadow(5px 5px 5px #0b38ec)
+      transform: scale(1)
+      transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out
+    &:hover
+      img
+        filter: drop-shadow(0px 0px 1px $backdrop-color)
+        //  -webkit-filter: drop-shadow(5px 15px 5px #1040e1)
+        transform: scale(1.1)
 

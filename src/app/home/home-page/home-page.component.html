@@ -1,65 +1,46 @@
-<div id="wrapper">
-  <!-- Floating logos
-  <img *ngFor="let logo of logoList" [src]="logo" class="floating-logo" alt="logo"
-       ngxParallaxScroll
-       [parallaxSpeed]='1'
-       [parallaxSmoothness]='0.0001'
-       [parallaxDirection]='"straight"'
-       [parallaxTimingFunction]='"linear"'
-       [parallaxThrottleTime]='0'
-       float
-       [floatSpeed]="0.03"/>
-  -->
-  <star-background [starCount]="70"></star-background>
-  <div id="welcome-panel">
-    <img id="picture" src="assets/me.jpeg" alt="me" class="golden-glow"/>
-    <div id="info">
-      <p id="primary-info">Hello, my name is <span class="golden-text">Mario</span></p>
-      <p id="secondary-info">Learn more about my work below.</p>
-    </div>
-  </div>
-  <div id="various-fits-panel">
-    <div id="vf-video-wrapper" class="float" data-aos="fade" data-aos-duration="1000">
-      <video autoplay loop muted playsinline onloadedmetadata="this.muted = true" oncanplay="this.play()" data-aos="fade-right">
-        <!-- Provide the Safari video -->
-        <source *ngIf="platform.SAFARI || platform.IOS"
-                src="assets/vf-hevc-safari.mp4"
-                type='video/mp4; codecs="hvc1"'>
-        <!-- .. and the Chrome video -->
-        <source *ngIf="platform.WEBKIT || platform.BLINK"
-                src="assets/vf-vp9-chrome.webm"
-                type="video/webm">
-
-      </video>
-    </div>
-    <div class="project-info" data-aos="fade-left">
-      <p class="project-title"><span class="golden-text">Various Fits</span></p>
-      <mat-divider></mat-divider>
-      <ul class="project-features">
-        <li> Full-stack web and native app </li>
-        <li> Social media platform </li>
-        <li> Hosted on cloud architecture </li>
-      </ul>
-      <mat-divider></mat-divider>
-      <p class="project-more"> Learn about the technologies used <a href="www.youtube.com">here</a> </p>
-    </div>
-  </div>
-
-  <div id="asc-panel">
-    <div id="asc-images" data-aos="fade-right">
-      <img id="python" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Python_logo_01.svg/2048px-Python_logo_01.svg.png" alt="PYTHON"/>
-      <mat-icon aria-hidden="false" aria-label="plus" fontIcon="add"></mat-icon>
-      <img id="wasm" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WebAssembly_Logo.svg/1200px-WebAssembly_Logo.svg.png" alt="WASM"/>
-    </div>
-    <div class="project-info" data-aos="fade-left">
-      <p class="project-title"><span class="golden-text">WebAssembly Text Interpreter</span></p>
-      <mat-divider></mat-divider>
-      <ul class="project-features">
-        <li> Built exclusively with standard Python </li>
-        <li> Supports assertions </li>
-      </ul>
-      <mat-divider></mat-divider>
-      <p class="project-more"> Learn about the technologies used <a href="www.youtube.com">here</a> </p>
-    </div>
+<div id="welcome-panel">
+  <img id="picture" src="assets/me.jpeg" alt="me" class="golden-glow"/>
+  <div id="info">
+    <p id="primary-info">Hello, my name is <span class="golden-text">Mario</span></p>
+    <p id="secondary-info">Learn more about my work below.</p>
   </div>
 </div>
+<home-project-panel id="various-fits-panel" title="Various Fits"
+  [features]="['Full-stack web and native app', 'Social media platform', 'Hosted on cloud architecture']">
+  <div id="vf-video-wrapper" class="float" data-aos="fade" data-aos-duration="1000" media>
+    <video autoplay loop muted playsinline onloadedmetadata="this.muted = true" oncanplay="this.play()" data-aos="fade-right">
+      <!-- Provide the Safari video -->
+      <source *ngIf="platform.SAFARI || platform.IOS"
+              src="assets/vf-hevc-safari.mp4"
+              type='video/mp4; codecs="hvc1"'>
+      <!-- .. and the Chrome video -->
+      <source *ngIf="platform.WEBKIT || platform.BLINK"
+              src="assets/vf-vp9-chrome.webm"
+              type="video/webm">
+
+    </video>
+  </div>
+</home-project-panel>
+
+<home-project-panel id="br-panel" title="Robotics Team Leader"
+  [features]="['Lead of programming department', 'Designed and built robots for 4 years', 'Competed in national and international competitions']">
+  <div id="br-image" data-aos="fade-right" media>
+    <img id="robot" src="assets/robot.png" alt="robot"/>
+  </div>
+</home-project-panel>
+
+<home-project-panel id="netlup-panel" title="3-Month Paid Internship"
+  [features]="['Summer of 2022', 'Developed a tool for data compression']">
+  <a href="https://www.netlup.com/" id="netlup-logo" data-aos="fade-right" media>
+    <img src="https://www.netlup.com/assets/logos/netluptechnologieslogo_1.png" alt="netlup"/>
+  </a>
+</home-project-panel>
+
+<home-project-panel id="asc-panel" title="WebAssembly Text Interpreter"
+  [features]="['Built exclusively with standard Python', 'Supports assertions']">
+  <div id="asc-images" data-aos="fade-right" media>
+    <img id="python" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Python_logo_01.svg/2048px-Python_logo_01.svg.png" alt="PYTHON"/>
+    <mat-icon aria-hidden="false" aria-label="plus" fontIcon="add"></mat-icon>
+    <img id="wasm" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WebAssembly_Logo.svg/1200px-WebAssembly_Logo.svg.png" alt="WASM"/>
+  </div>
+</home-project-panel>
