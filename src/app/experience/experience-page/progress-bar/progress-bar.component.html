@@ -1,0 +1,4 @@
+<div id="progress-wrapper">
+  <button #bullet *ngFor="let anchor of anchors" (click)="scrollTo(anchor)" class="progress-button" [id]="anchor.anchorName"
+          [matTooltip]="anchor.anchorName" matTooltipPosition="above" matTooltipClass="anchor-tooltip"></button>
+</div>

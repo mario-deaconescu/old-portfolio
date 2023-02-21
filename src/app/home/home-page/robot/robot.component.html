@@ -1,0 +1,12 @@
+<ngt-canvas *ngIf="robot$ | async as robot; else spinner">
+    <ng-container >
+      <ngt-primitive [object]="robot.scene" (beforeRender)="onBeforeRender($event.object)" [rotation]="[0.2, 0, 0]" [position]="[0, -0.5, 0]" [scale]="[7, 7, 7]"></ngt-primitive>
+    </ng-container>
+  <ngt-directional-light [position]="[0, 1, 2]" color="white"></ngt-directional-light>
+</ngt-canvas>
+
+<ng-template #spinner>
+  <div id="loading-placeholder">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
