@@ -1,4 +1,4 @@
-<star-background [starCount]="mobile.isMobile ? 70 : 100"></star-background>
+<star-background [starCount]="(mobile.isMobile$ | async ) ? 70 : 100"></star-background>
 <main [@routeAnimations]="prepareRoute(outlet)">
   <router-outlet #outlet="outlet"></router-outlet>
 </main>

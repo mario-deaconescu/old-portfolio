@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
 import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
+import {map, Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MobileService {
 
-  public isMobile: boolean = false;
+  public isMobile$: Observable<boolean>;
   constructor(private breakpointObserver: BreakpointObserver) {
-    this.breakpointObserver.observe([Breakpoints.Web]).subscribe((result) => {
-      this.isMobile = !result.matches;
-    })
+    this.isMobile$ = this.breakpointObserver.observe([Breakpoints.Web]).pipe(map(result => !result.matches));
   }
 }

@@ -1,0 +1,15 @@
+<div id="wrapper" class="golden-gradient-border-rounded" [ngClass]="title.replace(' ', '-')">
+  <p id="section-title" class="golden-text tit"
+     data-aos="zoom-out"
+     [attr.data-aos-anchor]="'.' + title.replace(' ', '-')"> {{ title }} </p>
+  <mat-divider [vertical]="!(mobile.isMobile$ | async)" [ngClass]="{'vertical-divider': !(mobile.isMobile$ | async)}"></mat-divider>
+  <div id="technologies">
+    <p *ngFor="let technology of technologies; let i = index" class="technology"
+       data-aos="fade-left"
+       [attr.data-aos-delay]="i * 100"
+       [attr.data-aos-anchor]="'.' + title.replace(' ', '-')">
+      {{ technology.name }}
+      <img class="technology-icon" [src]="'assets/icons/' + technology.icon + '.png'" [alt]="technology.icon"/>
+    </p>
+  </div>
+</div>

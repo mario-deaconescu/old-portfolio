@@ -8,6 +8,8 @@ import {AuxModule} from "@aux/aux.module";
 import { AppRoutingModule } from './app-routing.module';
 import {RouterLink, RouterOutlet} from "@angular/router";
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import {ExperienceModule} from "@app/experience/experience.module";
+import {ContactModule} from "@app/contact/contact.module";
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
         BrowserModule,
         BrowserAnimationsModule,
         HomeModule,
+        ExperienceModule,
+        ContactModule,
         AuxModule,
         AppRoutingModule,
         RouterOutlet,

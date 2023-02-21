@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {animate, group, query, style, transition, trigger} from "@angular/animations";
 import {RouterOutlet} from "@angular/router";
 import {MobileService} from "@aux/mobile.service";
+import * as AOS from "aos";
 export const fadeAnimation =
   trigger('routeAnimations', [
     transition('* <=> *', [
@@ -96,9 +97,14 @@ function slideTo(direction: string) {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   constructor(public mobile: MobileService) {
   }
+
+  ngOnInit() {
+    AOS.init();
+  }
+
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }

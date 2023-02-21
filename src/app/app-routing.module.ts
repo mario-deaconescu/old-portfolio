@@ -8,7 +8,7 @@ import {ContactPageComponent} from "@app/contact/contact-page/contact-page.compo
 const routes: Routes = [
   { path: '', component: HomePageComponent, data: {animation: 'Home'} },
   { path: 'experience', component: ExperiencePageComponent, data: {animation: 'Experience'}},
-  { path: 'contact', component: ContactPageComponent, data: {animation: 'Contact'} }
+  { path: 'about', component: ContactPageComponent, data: {animation: 'Contact'} }
 ];
 
 @NgModule({

@@ -1,0 +1,41 @@
+#wrapper
+  display: flex
+  align-items: center
+  margin: 70px auto
+  width: fit-content
+  position: relative
+  gap: 20px
+  flex-wrap: wrap
+  background: #222222
+  padding: 30px
+  max-width: 80vw
+  box-sizing: border-box
+  #section-title
+    font-size: 3rem
+    line-height: 3.5rem
+    margin: auto
+    font-weight: 200
+    text-align: center
+  .mat-divider-vertical
+    align-self: stretch
+    border-right-color: rgba(255, 255, 255, 0.5)
+  .mat-divider:not(.mat-divider-vertical)
+    border-top-color: rgba(255, 255, 255, 0.5)
+    width: 80vw
+    margin: auto
+  #technologies
+    margin: auto
+    .technology
+      font-size: 1.5rem
+      line-height: 2rem
+      font-weight: 300
+      display: flex
+      align-items: center
+      gap: 10px
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
+      width: min-content
+      .technology-icon
+        $icon-size: 30px
+        height: $icon-size
+        // Add shadow
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))

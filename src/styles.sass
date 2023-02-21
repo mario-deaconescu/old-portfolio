@@ -1,10 +1,10 @@
 //@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
 
 html
   background: rgb(35, 35, 35)
   font-family: montserrat, sans-serif
-  color: white
+  color: rgba(243, 243, 243, 0.88)
 body
   position: absolute
   width: 100%
@@ -18,7 +18,7 @@ main
 
 
 $gold: #FFD700
-$gold-gradient: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #d8b46a 30%, #c79f4b 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%)
+$gold-gradient-radial: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #d8b46a 30%, #c79f4b 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%)
 
 .standard-shadow
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19)
@@ -28,7 +28,7 @@ $gold-gradient: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37
 
 .golden-text
   font-weight: 400
-  background: $gold-gradient
+  background: $gold-gradient-radial
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
 
@@ -56,3 +56,48 @@ $gold-gradient: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37
 
 .float
   animation: float 6s ease-in-out infinite
+
+.anchor-tooltip
+  div
+    background-color: rgba(19, 19, 19, 0.35)
+    border-radius: 15px
+    color: rgba(255, 255, 255, 0.71)
+    font-size: 1rem
+    padding: 10px
+
+
+@keyframes golden-gradient-animation
+  @for $i from 0 through 200
+    #{$i / 2}%
+      background: linear-gradient(#{$i * 360 / 200}deg, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%)
+
+@mixin golden-gradient-border
+  &:before, &:after
+    content: ""
+    position: absolute
+    top: -2px
+    bottom: -2px
+    left: -2px
+    right: -2px
+    z-index: -1
+    animation: golden-gradient-animation 5s ease infinite
+  &:after
+    filter: blur(30px)
+
+.golden-gradient-border
+  @include golden-gradient-border
+
+.golden-gradient-border-rounded
+  @include golden-gradient-border
+  border-radius: 5px
+  &:before, &:after
+    border-radius: 5px
+
+.golden-gradient-border-circle
+  @include golden-gradient-border
+  border-radius: 50%
+  &:before, &:after
+    border-radius: 50%
+
+.title-text
+  font-family: 'Bebas Neue', sans-serif

@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {MobileService} from "@aux/mobile.service";
 import {Platform} from "@angular/cdk/platform";
-import * as AOS from 'aos';
 
 @Component({
   selector: 'home',
@@ -27,8 +26,5 @@ export class HomePageComponent {
   ]
 
   constructor(public responsive: MobileService, public platform: Platform) {}
-  ngOnInit(): void {
-    AOS.init()
-  }
 
 }

@@ -2,7 +2,7 @@
   <ng-content select="[media]"></ng-content>
   <div class="project-info" data-aos="fade-left">
     <p class="project-title">
-      <span class="golden-text">
+      <span class="title-text golden-text">
         {{ title }}
       </span>
     </p>
@@ -10,7 +10,5 @@
     <ul class="project-features">
       <li *ngFor="let feature of features"> {{feature}} </li>
     </ul>
-    <mat-divider></mat-divider>
-    <p class="project-more"> Learn about the technologies used <a [routerLink]="route">here</a> </p>
   </div>
 </div>

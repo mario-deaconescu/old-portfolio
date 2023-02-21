@@ -1,12 +1,14 @@
 <div id="welcome-panel">
-  <img id="picture" src="assets/me.jpeg" alt="me" class="golden-glow"/>
+  <div  id="picture" class="golden-gradient-border">
+    <img src="assets/me.jpeg" alt="me" class="golden-gradient-border"/>
+  </div>
   <div id="info">
     <p id="primary-info">Hello, my name is <span class="golden-text">Mario</span></p>
     <p id="secondary-info">Learn more about my work below.</p>
   </div>
 </div>
 <home-project-panel id="various-fits-panel" title="Various Fits"
-  [features]="['Full-stack web and native app', 'Social media platform', 'Hosted on cloud architecture']">
+  [features]="[ 'Helps organize your wardrobe based on personal preference', 'Full-stack web and native app', 'Social media platform', 'Hosted on cloud architecture']">
   <div id="vf-video-wrapper" class="float" data-aos="fade" data-aos-duration="1000" media>
     <video autoplay loop muted playsinline onloadedmetadata="this.muted = true" oncanplay="this.play()" data-aos="fade-right">
       <!-- Provide the Safari video -->
@@ -38,9 +40,9 @@
 
 <home-project-panel id="asc-panel" title="WebAssembly Text Interpreter"
   [features]="['Built exclusively with standard Python', 'Supports assertions']">
-  <div id="asc-images" data-aos="fade-right" media>
+  <a href="https://github.com/mario-deaconescu/wasm-interpreter" id="asc-images" data-aos="fade-right" media>
     <img id="python" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Python_logo_01.svg/2048px-Python_logo_01.svg.png" alt="PYTHON"/>
     <mat-icon aria-hidden="false" aria-label="plus" fontIcon="add"></mat-icon>
     <img id="wasm" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WebAssembly_Logo.svg/1200px-WebAssembly_Logo.svg.png" alt="WASM"/>
-  </div>
+  </a>
 </home-project-panel>

@@ -34,7 +34,7 @@ export class NavigationBarComponent {
   public navItems: NavItem[] = [
     { name: 'Home', route: '/' },
     { name: 'Experience', route: '/experience' },
-    { name: 'Contact', route: '/contact'}
+    { name: 'About', route: '/about'}
     ]
 
   constructor(public router: Router) {}
