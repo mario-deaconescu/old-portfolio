@@ -1,1 +1,14 @@
-<p>contact-page works!</p>
+<div id="outer-panel" [ngClass]="{'mobile-contact': mobile.isMobile$ | async}">
+  <div id="inner-panel">
+    <h1 id="title">
+      Need a developer on your team or help with a project? Let's talk about it!
+    </h1>
+    <h2 id="email">
+      You can reach me at <span class="golden-text">{{ email }}</span>
+    </h2>
+    <a href="mailto:{{ email }}" id="email-button" matRipple>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="mail"></mat-icon>
+      Contact Me
+    </a>
+  </div>
+</div>

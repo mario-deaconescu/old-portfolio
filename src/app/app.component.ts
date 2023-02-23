@@ -3,6 +3,7 @@ import {animate, group, query, style, transition, trigger} from "@angular/animat
 import {RouterOutlet} from "@angular/router";
 import {MobileService} from "@aux/mobile.service";
 import * as AOS from "aos";
+import {Meta} from "@angular/platform-browser";
 export const fadeAnimation =
   trigger('routeAnimations', [
     transition('* <=> *', [
@@ -12,6 +13,7 @@ export const fadeAnimation =
           left: 0,
           top: 0,
           width: '100%',
+
         })
       ]),
       query(':enter', [
@@ -44,27 +46,29 @@ function slideTo(direction: string) {
     query(':enter, :leave', [
       style({
         position: 'absolute',
-        top: 0,
-        [direction]: 0,
+        transform: 'translateX(0)',
         width: '100%'
       })
     ], optional),
     query(':enter', [
-      style({ [direction]: '-110%'})
+      style({ transform: `translateX(${direction === 'left' ? -100 : 100}%)` })
     ]),
     group([
       query(':leave', [
-        animate('600ms ease', style({ [direction]: '110%'}))
+        animate('600ms ease',
+          style({
+          transform: `translateX(${direction === 'left' ? 100 : -100}%)`
+          })
+        )
       ], optional),
       query(':enter', [
-        animate('600ms ease', style({ [direction]: '0%'}))
+        animate('600ms ease',
+          style({
+            transform: 'translateX(0)',
+          })
+        )
       ])
     ]),
-    // Normalize the page style... Might not be necessary
-
-    // Required only if you have child animations on the page
-    // query(':leave', animateChild()),
-    // query(':enter', animateChild()),
   ];
 }
 /*export const slideInAnimation =
@@ -98,7 +102,20 @@ function slideTo(direction: string) {
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent implements OnInit{
-  constructor(public mobile: MobileService) {
+
+  private readonly keywords: string[] = [
+    'software developer',
+    'software engineer',
+    'programmer',
+    'full stack',
+    'angular',
+    'portfolio',
+    'resume',
+    'awarded',
+  ]
+
+  constructor(private meta: Meta, public mobile: MobileService) {
+    this.meta.addTag({name: 'keywords', content: this.keywords.join(', ')})
   }
 
   ngOnInit() {

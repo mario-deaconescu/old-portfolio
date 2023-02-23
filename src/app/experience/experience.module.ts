@@ -8,6 +8,7 @@ import { ScrollingTitleComponent } from './experience-page/scrolling-title/scrol
 import { SectionPanelComponent } from './experience-page/section-panel/section-panel.component';
 import {MatDividerModule} from "@angular/material/divider";
 import { SectionComponent } from './experience-page/section/section.component';
+import {AuxModule} from "@aux/aux.module";
 
 
 
@@ -23,7 +24,8 @@ import { SectionComponent } from './experience-page/section/section.component';
     imports: [
         CommonModule,
         MatTooltipModule,
-        MatDividerModule
+        MatDividerModule,
+        AuxModule
     ],
   exports: [
     ExperiencePageComponent

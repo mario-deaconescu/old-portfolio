@@ -6,9 +6,9 @@ import {ExperiencePageComponent} from "@app/experience/experience-page/experienc
 import {ContactPageComponent} from "@app/contact/contact-page/contact-page.component";
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent, data: {animation: 'Home'} },
-  { path: 'experience', component: ExperiencePageComponent, data: {animation: 'Experience'}},
-  { path: 'about', component: ContactPageComponent, data: {animation: 'Contact'} }
+  { path: '', title: "Mario Deaconescu", component: HomePageComponent, data: {animation: 'Home'} },
+  { path: 'experience', title: "Experience - Mario Deaconescu", component: ExperiencePageComponent, data: {animation: 'Experience'}},
+  { path: 'contact', title: "Contact - Mario Deaconescu", component: ContactPageComponent, data: {animation: 'Contact'} }
 ];
 
 @NgModule({

@@ -1,15 +1,19 @@
+$welcome-picture-size: 200px
+.mobile-welcome-panel
+  margin: calc(50vh - $welcome-picture-size / 2 - 2rem) auto 40vh !important
+  margin: calc(50svh - $welcome-picture-size / 2 - 2rem) auto 40vh !important
 #welcome-panel
   width: fit-content
   margin: 40vh auto 40vh
+  margin: 40svh auto 40vh
   display: flex
   align-items: center
   flex-wrap: wrap
   gap: 20px
   #picture
     position: relative
-    $picture-size: 200px
-    width: $picture-size
-    height: $picture-size
+    width: $welcome-picture-size
+    height: $welcome-picture-size
     margin: auto
     img
       height: 100%
@@ -47,25 +51,41 @@
       height: calc(($vf-video-width + $vf-video-margin-horizontal) * $vf-aspect-ratio)
       right: calc($vf-video-margin-horizontal / 2)
       bottom: calc($vf-video-margin-vertical / 2)
+
+#study-panel
+  $image-size: 250px
+  img
+    width: $image-size
+    height: $image-size
+    margin: auto
+    background: rgba(255, 255, 255, 0.9)
+    border-radius: 15px
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)
+
 #br-panel
   #br-image
     margin: auto
-    $robot-image-size: 300px
+    $robot-image-size: 400px
     $backdrop-color: #121212
     width: $robot-image-size
     height: $robot-image-size
-    img
-      width: 100%
-      height: 100%
-      -webkit-filter: drop-shadow(0px 0px 5px $backdrop-color)
-      filter: drop-shadow(0px 0px 5px $backdrop-color)
-      transform: scale(1)
-      transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out
+    opacity: 1
+    transition: opacity 0.2s ease-in-out
     &:hover
-      img
-        -webkit-filter: drop-shadow(0px 0px 15px $backdrop-color)
-        filter: drop-shadow(0px 0px 15px $backdrop-color)
-        transform: scale(1.1)
+      opacity: 0.7
+
+    //img
+    //  width: 100%
+    //  height: 100%
+    //  -webkit-filter: drop-shadow(0px 0px 5px $backdrop-color)
+    //  filter: drop-shadow(0px 0px 5px $backdrop-color)
+    //  transform: scale(1)
+    //  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out
+    //&:hover
+    //  img
+    //    -webkit-filter: drop-shadow(0px 0px 15px $backdrop-color)
+    //    filter: drop-shadow(0px 0px 15px $backdrop-color)
+    //    transform: scale(1.1)
 
 
 #asc-panel

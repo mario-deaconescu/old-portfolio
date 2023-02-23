@@ -27,11 +27,12 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/sitemap.xml",
+              "src/robots.txt"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
-              "animate.css/animate.compat.css",
               "aos/dist/aos.css",
               "src/styles.sass"
             ],
@@ -42,8 +43,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -92,11 +93,12 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/sitemap.xml",
+              "src/robots.txt"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
-              "animate.css/animate.compat.css",
               "src/styles.sass"
             ],
             "scripts": []

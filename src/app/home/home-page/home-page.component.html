@@ -1,6 +1,6 @@
-<div id="welcome-panel">
+<div id="welcome-panel" [ngClass]="{'mobile-welcome-panel': mobile.isMobile$ | async}">
   <div  id="picture" class="golden-gradient-border">
-    <img src="assets/me.jpeg" alt="me" class="golden-gradient-border"/>
+    <img [src]="'static-images/me.jpeg' | CDN" alt="me" class="golden-gradient-border"/>
   </div>
   <div id="info">
     <p id="primary-info">Hello, my name is <span class="golden-text">Mario</span></p>
@@ -13,11 +13,11 @@
     <video autoplay loop muted playsinline onloadedmetadata="this.muted = true" oncanplay="this.play()" data-aos="fade-right">
       <!-- Provide the Safari video -->
       <source *ngIf="platform.SAFARI || platform.IOS"
-              src="assets/vf-hevc-safari.mp4"
+              [src]="'static-other/vf-hevc-safari.mp4' | CDN"
               type='video/mp4; codecs="hvc1"'>
       <!-- .. and the Chrome video -->
       <source *ngIf="platform.WEBKIT || platform.BLINK"
-              src="assets/vf-vp9-chrome.webm"
+              [src]="'static-other/vf-vp9-chrome.webm' | CDN"
               type="video/webm">
 
     </video>
@@ -27,9 +27,13 @@
 <home-project-panel id="br-panel" title="Robotics Team Leader"
   [features]="['Lead of programming department', 'Designed and built robots for 4 years', 'Competed in national and international competitions']">
   <a href="https://bionicroyals.com" id="br-image" data-aos="fade-right" media>
-<!--    <img id="robot" src="assets/robot.png" alt="robot"/>-->
     <app-robot [speed]="0.01"></app-robot>
   </a>
+</home-project-panel>
+
+<home-project-panel id="study-panel" title="Studies and Awards"
+                    [features]="['Awards at the National Olympiad in Informatics from 2015 to 2021', 'Currently studying Computer Science at the University of Bucharest']">
+  <img [src]="'static-images/university.png' | CDN" data-aos="fade-right" alt="medal" media/>
 </home-project-panel>
 
 <home-project-panel id="netlup-panel" title="3-Month Paid Internship"

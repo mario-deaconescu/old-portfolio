@@ -70,8 +70,8 @@ $gold-gradient-radial: radial-gradient(ellipse farthest-corner at right bottom, 
 
 @keyframes golden-gradient-animation
   @for $i from 0 through 200
-    #{$i / 2}%
-      background: linear-gradient(#{$i * 360 / 200}deg, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%)
+    #{calc($i / 2)}%
+      background: linear-gradient(#{calc($i * 360 / 200)}deg, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%)
 
 @mixin golden-gradient-border
   &:before, &:after

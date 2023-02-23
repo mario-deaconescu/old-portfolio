@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {FloatDirective} from "@aux/float.directive";
 import {MobileService} from "@aux/mobile.service";
 import { ParallaxDirective } from './parallax.directive';
+import { CDNPipe } from '@aux/cdn-pipe.pipe';
 
 
 
@@ -10,16 +11,19 @@ import { ParallaxDirective } from './parallax.directive';
   declarations: [
     FloatDirective,
     ParallaxDirective,
+    CDNPipe,
   ],
   imports: [
     CommonModule
   ],
   providers: [
-    MobileService
+    MobileService,
+    CDNPipe
   ],
     exports: [
         FloatDirective,
-        ParallaxDirective
+        ParallaxDirective,
+        CDNPipe
     ]
 })
 export class AuxModule { }

@@ -1,12 +1,16 @@
-import {ChangeDetectorRef, Component, QueryList, ViewChildren} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, QueryList, ViewChildren} from '@angular/core';
 import {ProgressAnchorDirective} from "@app/experience/experience-page/progress-bar/progress-anchor.directive";
+import {PageComponent} from "@app/page-component/page.component";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-experience-page',
   templateUrl: './experience-page.component.html',
   styleUrls: ['./experience-page.component.sass']
 })
-export class ExperiencePageComponent {
+export class ExperiencePageComponent extends PageComponent implements AfterViewInit{
+
+  protected override readonly description: string = 'Learn about my experience in software development, game development, and robotics. Find out what technologies I have used and what I have learned.';
 
   @ViewChildren(ProgressAnchorDirective) anchors!: QueryList<ProgressAnchorDirective>;
 
@@ -58,11 +62,9 @@ export class ExperiencePageComponent {
     {name: 'Docker', icon: 'docker'},
     ];
 
-
-
-
-
-  constructor(private cdr: ChangeDetectorRef) { }
+  constructor(protected override meta: Meta, protected override title: Title, private cdr: ChangeDetectorRef) {
+    super(meta, title);
+  }
   ngAfterViewInit() {
     this.cdr.detectChanges();
   }
