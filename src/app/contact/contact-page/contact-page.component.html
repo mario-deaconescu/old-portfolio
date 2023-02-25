@@ -6,9 +6,15 @@
     <h2 id="email">
       You can reach me at <span class="golden-text">{{ email }}</span>
     </h2>
-    <a href="mailto:{{ email }}" id="email-button" matRipple>
-      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="mail"></mat-icon>
-      Contact Me
-    </a>
+    <div id="button-row">
+      <a href="mailto:{{ email }}" id="email-button" matRipple>
+        <mat-icon aria-hidden="false" aria-label="Email Icon" fontIcon="mail"></mat-icon>
+        Contact Me
+      </a>
+      <a href="https://www.linkedin.com/in/mario-deaconescu" target="_blank" id="linkedin-button" matRipple>
+        <img src="assets/linkedin.svg" alt="linkedin icon" />
+        LinkedIn
+      </a>
+    </div>
   </div>
 </div>

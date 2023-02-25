@@ -26,28 +26,49 @@
 
 <home-project-panel id="br-panel" title="Robotics Team Leader"
   [features]="['Lead of programming department', 'Designed and built robots for 4 years', 'Competed in national and international competitions']">
-  <a href="https://bionicroyals.com" id="br-image" data-aos="fade-right" media>
+  <a href="https://bionicroyals.com" id="br-image" data-aos="fade-right" target="_blank" media>
     <app-robot [speed]="0.01"></app-robot>
   </a>
 </home-project-panel>
 
 <home-project-panel id="study-panel" title="Studies and Awards"
                     [features]="['Awards at the National Olympiad in Informatics from 2015 to 2021', 'Currently studying Computer Science at the University of Bucharest']">
-  <img [src]="'static-images/university.png' | CDN" data-aos="fade-right" alt="medal" media/>
+  <a id="study-image" href="https://fmi.unibuc.ro/" target="_blank" media>
+    <img [src]="'static-images/university.png' | CDN" data-aos="fade-right" alt="medal"/>
+  </a>
+</home-project-panel>
+
+<home-project-panel id="diginesis-panel" title="3-Month Paid Internship"
+                    [features]="['Summer of 2022', 'Developed a ERP software using Python']">
+  <a href="https://www.diginesis.com/ro" id="diginesis-logo" data-aos="fade-right" target="_blank" media>
+    <img src="https://www.diginesis.com/sites/all/themes/proma/logo.png" alt="diginesis"/>
+  </a>
 </home-project-panel>
 
 <home-project-panel id="netlup-panel" title="3-Month Paid Internship"
-  [features]="['Summer of 2022', 'Developed a tool for data compression']">
-  <a href="https://www.netlup.com/" id="netlup-logo" data-aos="fade-right" media>
+  [features]="['Summer of 2022', 'Developed a tool for data compression using C++']">
+  <a href="https://www.netlup.com/" id="netlup-logo" data-aos="fade-right" target="_blank" media>
     <img src="https://www.netlup.com/assets/logos/netluptechnologieslogo_1.png" alt="netlup"/>
   </a>
 </home-project-panel>
 
 <home-project-panel id="asc-panel" title="WebAssembly Text Interpreter"
   [features]="['Built exclusively with standard Python', 'Supports assertions']">
-  <a href="https://github.com/mario-deaconescu/wasm-interpreter" id="asc-images" data-aos="fade-right" media>
+  <a href="https://github.com/mario-deaconescu/wasm-interpreter" id="asc-images" data-aos="fade-right" target="_blank" media>
     <img id="python" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Python_logo_01.svg/2048px-Python_logo_01.svg.png" alt="PYTHON"/>
     <mat-icon aria-hidden="false" aria-label="plus" fontIcon="add"></mat-icon>
     <img id="wasm" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WebAssembly_Logo.svg/1200px-WebAssembly_Logo.svg.png" alt="WASM"/>
+  </a>
+</home-project-panel>
+
+<home-project-panel id="wordle-panel" title="Romanian Wordle"
+                    [features]="['Includes a full UI', 'Includes an optimum solver', 'Finds words in miminum amount of guesses']">
+  <a id="wordle-images" data-aos="fade-right" target="_blank" media>
+    <div id="letter-w"></div>
+    <div> O </div>
+    <div> R </div>
+    <div> D </div>
+    <div> L </div>
+    <div> E </div>
   </a>
 </home-project-panel>

@@ -19,32 +19,43 @@
       font-size: clamp(1.1rem, 1.5vw, 4rem)
       line-height: clamp(1.3rem, 1.5vw, 4rem)
       color: rgba(158,158,158,0.75)
-    #email-button
-      box-sizing: border-box
+    #button-row
+      margin-top: 20px
       display: flex
-      align-items: center
-      width: fit-content
-      margin-top: 30px
-      $button-color: rgb(255, 255, 255)
-      text-decoration: none
-      color: $button-color
-      border-radius: 15px
-      border: $button-color solid 3px
-      padding: 20px 20px 20px 30px
-      font-size: 2.5rem
-      font-weight: 100
-      line-height: 2.5rem
+      flex-wrap: wrap
+      justify-items: start
       gap: 20px
-      opacity: 0.7
-      transition: opacity 0.2s ease-in-out
-      &:hover
-        opacity: 1
-      mat-icon
-        transform: scale(2)
+      #email-button, #linkedin-button
+        //margin: 30px auto 0
+        box-sizing: border-box
+        display: flex
+        align-items: center
+        width: fit-content
+        $button-color: rgb(255, 255, 255)
+        text-decoration: none
+        color: $button-color
+        border-radius: 15px
+        border: $button-color solid 3px
+        padding: 20px 20px 20px 30px
+        font-size: 2.5rem
+        font-weight: 100
+        line-height: 2.5rem
+        gap: 20px
+        opacity: 0.7
+        transition: opacity 0.2s ease-in-out
+        &:hover
+          opacity: 1
+        mat-icon
+          transform: scale(2)
+      #linkedin-button
+        img
+          $linkedin-image-size: 40px
+          width: $linkedin-image-size
+          height: $linkedin-image-size
+          margin-right: -10px
 .mobile-contact
   h1, h2
     text-align: center !important
-  #email-button
-    margin-left: auto
-    margin-right: auto
+  #button-row
+    justify-content: center
 
