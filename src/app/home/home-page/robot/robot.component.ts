@@ -17,7 +17,7 @@ export class RobotComponent{
   protected robot$: Observable<any> = this.mobile.isMobile$.pipe(
     mergeMap(isMobile =>
       this.loader.load(
-        this.cdn.transform('models/' + (isMobile ? 'robot-mobile' : 'robot') + '.gltf'))
+        this.cdn.transform('models/' + (isMobile ? 'robot-mobile' : 'robot-mobile') + '.gltf'))
     ));
 
   constructor(private loader: NgtGLTFLoader, protected mobile: MobileService, private cdn: CDNPipe) {
