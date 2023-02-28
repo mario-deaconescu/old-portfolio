@@ -1,4 +1,4 @@
-<ngt-canvas *ngIf="robot$ | async as robot; else spinner">
+<ngt-canvas *ngIf="robot$ | async as robot; else spinner" data-aos="fade-right">
     <ng-container >
 <!--      <ngt-primitive [object]="robot.scene" (beforeRender)="onBeforeRender($event.object)"-->
 <!--                     [rotation]="[0.2, 0, 0]"-->
@@ -13,7 +13,7 @@
 </ngt-canvas>
 
 <ng-template #spinner>
-  <figure id="loading-placeholder">
+  <figure id="loading-placeholder" data-aos="fade-right">
 <!--    <mat-spinner></mat-spinner>-->
     <img id="robot" [src]="'static-images/robot.png' | CDN" alt="robot"/>
   </figure>
