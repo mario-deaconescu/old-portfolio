@@ -15,11 +15,22 @@ $welcome-picture-size: 200px
     width: $welcome-picture-size
     height: $welcome-picture-size
     margin: auto
+    backdrop-filter: blur(4px)
+    background-color: rgba(229, 229, 229, 0.04)
+    border-radius: 50%
+    overflow: hidden
+    @keyframes image-float
+      0%
+        transform: rotate(0deg) scale(1)
+      50%
+        transform: rotate(-2deg) scale(1.05)
+      100%
+        transform: rotate(0deg) scale(1)
     img
       height: 100%
       width: 100%
       object-fit: cover
-      object-position: top
+      animation: image-float 5s ease-in-out infinite
     img, &:before, &:after
       border-radius: 100%
   #info

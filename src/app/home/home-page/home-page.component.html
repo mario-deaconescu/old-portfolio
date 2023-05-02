@@ -1,6 +1,7 @@
 <div id="welcome-panel" [ngClass]="{'mobile-welcome-panel': mobile.isMobile$ | async}">
-  <div  id="picture" class="golden-gradient-border">
-    <img [src]="'static-images/me.jpeg' | CDN" alt="me" class="golden-gradient-border"/>
+  <div  id="picture">
+<!--    <img [src]="'static-images/me.jpeg' | CDN" alt="me" class="golden-gradient-border"/>-->
+    <img src="assets/memoji.png" alt="me"/>
   </div>
   <div id="info">
     <p id="primary-info">Hello, my name is <span class="golden-text">Mario</span></p>

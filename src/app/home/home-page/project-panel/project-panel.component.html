@@ -8,7 +8,14 @@
     </h2>
     <mat-divider></mat-divider>
     <ul class="project-features">
-      <li *ngFor="let feature of features"> {{feature}} </li>
+      <li *ngFor="let feature of features" #project_feature_li>
+        <div class="project-features-bullet">
+          <div class="project-features-bullet-icon"></div>
+        </div>
+        <span>
+          {{feature}}
+        </span>
+      </li>
     </ul>
   </div>
 </div>

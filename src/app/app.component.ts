@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {animate, group, query, style, transition, trigger} from "@angular/animations";
-import {RouterOutlet} from "@angular/router";
+import {Router, RouterOutlet} from "@angular/router";
 import {MobileService} from "@aux/mobile.service";
 import * as AOS from "aos";
 import {Meta} from "@angular/platform-browser";
+import {ViewportScroller} from "@angular/common";
 export const fadeAnimation =
   trigger('routeAnimations', [
     transition('* <=> *', [

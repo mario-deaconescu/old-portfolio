@@ -1,6 +1,7 @@
 import {Component, HostListener, Input} from '@angular/core';
 import {Router} from "@angular/router";
 import {animate, state, style, transition, trigger} from "@angular/animations";
+import {ViewportScroller} from "@angular/common";
 
 interface NavItem {
   name: string;
@@ -37,7 +38,7 @@ export class NavigationBarComponent {
     { name: 'Contact', route: '/contact'}
     ]
 
-  constructor(public router: Router) {}
+  constructor(private router: Router, private viewportScroller: ViewportScroller) {}
 
   public get activeRoute(): string {
     return this.router.url;
@@ -46,6 +47,15 @@ export class NavigationBarComponent {
   @HostListener('window:scroll')
   onScroll() {
     this.passedOffset = window.scrollY > this.offset;
+  }
+
+  protected goTo = async (url: string) => {
+    this.viewportScroller.scrollToPosition([0, 0]);
+    //Wait until the scroll is finished, by waiting until the scroll position is 0
+    while (this.viewportScroller.getScrollPosition()[1] !== 0) {
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+    this.router.navigateByUrl(url);
   }
 
 }

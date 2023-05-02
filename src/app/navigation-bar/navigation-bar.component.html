@@ -1,5 +1,5 @@
 <nav id="bar" [@offset]="passedOffset ? 'past' : 'initial'">
-  <a *ngFor="let item of navItems" [routerLink]="item.route" class="nav-item" [ngClass]="{'active-nav-item': activeRoute == item.route}">
+  <a *ngFor="let item of navItems" (click)="goTo(item.route)" class="nav-item" [ngClass]="{'active-nav-item': activeRoute == item.route}">
     {{item.name}}
   </a>
 </nav>
