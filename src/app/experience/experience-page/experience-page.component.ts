@@ -18,11 +18,13 @@ export class ExperiencePageComponent extends PageComponent implements AfterViewI
     {name: 'Angular', icon: 'angular'},
     {name: 'Capacitor', icon: 'capacitor'},
     {name: 'Bootstrap', icon: 'bootstrap'},
+    {name: 'Material', icon: 'material'},
     {name: 'Sass', icon: 'sass'},
     ];
   public backEndTechnologies = [
     {name: 'Django', icon: 'django'},
     {name: 'Node', icon: 'node'},
+    {name: 'ASP.NET', icon: 'aspnet'},
     {name: 'PostgreSQL', icon: 'postgres'},
     {name: 'MySQL', icon: 'mysql'},
     {name: 'Nginx', icon: 'nginx'},
@@ -58,6 +60,7 @@ export class ExperiencePageComponent extends PageComponent implements AfterViewI
   public cloudServices = [
     {name: 'GoogleCloud', icon: 'googlecloud'},
     {name: 'Firebase', icon: 'firebase'},
+    {name: 'Azure', icon: 'azure'},
     {name: 'Git', icon: 'git'},
     {name: 'Docker', icon: 'docker'},
     ];
