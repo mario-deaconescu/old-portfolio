@@ -4,6 +4,7 @@ import {FloatDirective} from "@aux/float.directive";
 import {MobileService} from "@aux/mobile.service";
 import { ParallaxDirective } from './parallax.directive';
 import { CDNPipe } from '@aux/cdn-pipe.pipe';
+import { BulletListComponent } from './bullet-list/bullet-list.component';
 
 
 
@@ -12,6 +13,7 @@ import { CDNPipe } from '@aux/cdn-pipe.pipe';
     FloatDirective,
     ParallaxDirective,
     CDNPipe,
+    BulletListComponent,
   ],
   imports: [
     CommonModule
@@ -23,7 +25,8 @@ import { CDNPipe } from '@aux/cdn-pipe.pipe';
     exports: [
         FloatDirective,
         ParallaxDirective,
-        CDNPipe
+        CDNPipe,
+        BulletListComponent
     ]
 })
 export class AuxModule { }

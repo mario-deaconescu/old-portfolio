@@ -1,0 +1,67 @@
+$divider-color: rgba(255,255,255,0.5)
+.bullet-list
+  position: relative
+  $list-line-height: 1.6rem
+  list-style-type: disc
+  font-size: 1.2rem
+  line-height: $list-line-height
+  font-weight: 300
+  $padding-inline-start: 2rem
+  padding-inline-start: $padding-inline-start
+  padding-inline-end: 1rem
+  li
+    $bullet-size: .8rem
+    $bullet-border-width: 2px
+    $bullet-line-margin: .6rem
+    position: relative
+    list-style: none
+    padding-left: calc(#{$padding-inline-start} - #{$bullet-size} - #{$bullet-border-width})
+    margin-bottom: $bullet-line-margin
+    .bullet-list-bullet
+      display: flex
+      position: absolute
+      align-items: center
+      flex-direction: column
+      margin-right: 10px
+      height: calc(100% + #{$bullet-line-margin})
+      left: calc(-#{$padding-inline-start} + #{$bullet-size} + #{$bullet-border-width})
+      .bullet-list-bullet-icon
+        width: $bullet-size
+        height: $bullet-size
+        border-radius: 50%
+        border: $bullet-border-width solid $divider-color
+        flex-shrink: 0
+        position: relative
+        &:before
+          $bullet-inner-size: .3rem
+          content: ''
+          display: block
+          width: $bullet-inner-size
+          height: $bullet-inner-size
+          border-radius: 50%
+          background-color: $divider-color
+          top: calc(50% - #{$bullet-inner-size} / 2)
+          left: calc(50% - #{$bullet-inner-size} / 2)
+          position: absolute
+          opacity: 0
+          transition: opacity .3s ease-in-out
+      &:before, &:after
+        content: ''
+        display: block
+        width: $bullet-border-width
+        background-color: $divider-color
+      &:before
+        height: calc(50% - #{$bullet-size} / 2 - #{$bullet-border-width} * 2)
+      &:after
+        height: calc(50% - #{$bullet-size} / 2 + #{$bullet-line-margin})
+  li:hover, .bullet-list-hovered
+    .bullet-list-bullet .bullet-list-bullet-icon::before
+      opacity: 1
+  li:first-child
+    .bullet-list-bullet
+      &:before
+        background: transparent !important
+  li:last-child
+    .bullet-list-bullet
+      &:after
+        background: transparent !important

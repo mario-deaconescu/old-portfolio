@@ -1,10 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {MobileService} from "@aux/mobile.service";
-
-interface Technology {
-  name: string;
-  icon: string;
-}
+import {Feature} from "@aux/feature.interface";
 
 @Component({
   selector: 'experience-section-panel',
@@ -14,8 +10,11 @@ interface Technology {
 export class SectionPanelComponent {
 
   @Input() title!: string;
-  @Input() technologies!: Technology[];
+  @Input() technologies!: Feature[];
 
-  constructor(public mobile: MobileService) { }
+  constructor(public mobile: MobileService) {
+    const x: string[] = [];
+    const y = x.map((x) => x.length);
+  }
 
 }

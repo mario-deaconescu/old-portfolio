@@ -7,7 +7,7 @@ import {ContactPageComponent} from "@app/contact/contact-page/contact-page.compo
 
 const routes: Routes = [
   { path: '', title: "Mario Deaconescu", component: HomePageComponent, data: {animation: 'Home'} },
-  { path: 'experience', title: "Experience - Mario Deaconescu", component: ExperiencePageComponent, data: {animation: 'Experience'}},
+  { path: 'skills', title: "Experience - Mario Deaconescu", component: ExperiencePageComponent, data: {animation: 'Experience'}},
   { path: 'contact', title: "Contact - Mario Deaconescu", component: ContactPageComponent, data: {animation: 'Contact'} }
 ];
 

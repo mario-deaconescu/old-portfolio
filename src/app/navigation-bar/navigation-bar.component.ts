@@ -34,7 +34,7 @@ export class NavigationBarComponent {
 
   public navItems: NavItem[] = [
     { name: 'Home', route: '/' },
-    { name: 'Experience', route: '/experience' },
+    { name: 'Skills', route: '/skills' },
     { name: 'Contact', route: '/contact'}
     ]
 

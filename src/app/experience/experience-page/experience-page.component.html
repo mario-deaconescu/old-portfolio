@@ -1,27 +1,35 @@
 <h2 id="first-title" class="section-title" experienceProgressAnchor="Web Development"> WEB DEVELOPMENT </h2>
 <mat-divider></mat-divider>
-<experience-section-panel title="Front-End"
-                          [technologies]="frontEndTechnologies"></experience-section-panel>
-<experience-section-panel title="Back-End"
-                          [technologies]="backEndTechnologies"></experience-section-panel>
-<experience-section-panel title="Cloud"
-                          [technologies]="cloudServices"></experience-section-panel>
+<div class="section-panel-wrapper">
+  <experience-section-panel title="Front-End"
+                            [technologies]="frontEndTechnologies"></experience-section-panel>
+  <experience-section-panel title="Back-End"
+                            [technologies]="backEndTechnologies"></experience-section-panel>
+  <experience-section-panel title="Cloud"
+                            [technologies]="cloudServices"></experience-section-panel>
+</div>
 <mat-divider></mat-divider>
 <h2 class="section-title" experienceProgressAnchor="Game Development"> GAME DEVELOPMENT </h2>
 <mat-divider></mat-divider>
-<experience-section-panel title="Software"
-                          [technologies]="gameDevTechnologies"></experience-section-panel>
+<div class="section-panel-wrapper">
+  <experience-section-panel title="Software"
+                            [technologies]="gameDevTechnologies"></experience-section-panel>
+</div>
 <mat-divider></mat-divider>
 <h2 class="section-title" experienceProgressAnchor="Robotics"> ROBOTICS </h2>
 <mat-divider></mat-divider>
-<experience-section-panel title="Technologies"
-                          [technologies]="roboticsTechnologies"></experience-section-panel>
+<div class="section-panel-wrapper">
+  <experience-section-panel title="Tools"
+                            [technologies]="roboticsTechnologies"></experience-section-panel>
+</div>
 <mat-divider></mat-divider>
 <h2 class="section-title" experienceProgressAnchor="Miscellaneous"> MISCELLANEOUS </h2>
 <mat-divider></mat-divider>
-<experience-section-panel title="Languages"
-                          [technologies]="programmingLanguages"></experience-section-panel>
-<experience-section-panel title="Editing Software"
-                          [technologies]="editingTools"></experience-section-panel>
+<div class="section-panel-wrapper">
+  <experience-section-panel title="Languages"
+                            [technologies]="programmingLanguages"></experience-section-panel>
+  <experience-section-panel title="Editing Software"
+                            [technologies]="editingTools"></experience-section-panel>
+</div>
 
 <experience-progress-bar [anchors]="anchors"></experience-progress-bar>
